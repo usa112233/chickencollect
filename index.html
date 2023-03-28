@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>치킨 모음 페이지</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        let index=1;
+        $(function(){
+            $('.mainImage_panel').append($('.slide').first().clone());
+            $('.mainImage_panel').prepend($('.slide').eq(-2).clone());
+            
+            moveSlider(index);
+            autoSlider();
+            $('.goJoin').click(function(){
+                popupOpen();
+            });
+            $('.findIdPw').click(function(){
+                alert('아직 구현되지 않은 기능입니다.');
+                return false;
+            });
+
+            //메인페이지 슬라이더 함수
+        function moveSlider(index){
+            $('.mainImage_panel').animate({
+                left:-(index*600)
+            },'slow');
+        }
+        //자동 이미지 슬라이드 구현 함수
+        function autoSlider(){
+            setInterval(function(){
+                if(index<6){
+                    index++;
+                    moveSlider(index);
+                }else{
+                    $('.mainImage_panel').css('left',0);
+                    index=1;
+                    moveSlider(index);
+                }
+            },5000);
+        }
+        });
+        //로그인창 팝업 오픈 함수
+        function popupOpen(){
+            $('.login').css({
+                left:300,
+                top:100
+            }).show('blind',500);
+        }
+        //로그인창 클로즈 함수
+        function popupClose(){
+            $('.login').hide();
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <div id="fixedArea">
+        <a href="#">위로 가기</a>
+    </div>
+    <!--wrapper 영역 시작-->
+    <div id="wrapper">
+        <!--헤더 영역 시작-->
+        <header id="headerid">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+            </h1>
+            <div id="headInfo">
+                <ul class="infoLink">
+                    <li>
+                        <button class="goJoin">로그인</button>
+                    </li>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+                <h3>지금껏 먹었던 치킨중 BEST 픽만 모았습니다</h3>
+            </div>
+            <div id="headMain">
+                <ul class="mainMenu">
+                    <li><a href="menu.html">메뉴소개</a></li>
+                    <li><a href="https://naver.me/GrSqepRM" target="_blank">매장찾기</a></li>
+                    <li><a href="https://youtu.be/etj3Y1VVKL4" target="_blank">소개</a></li>
+                    <li><a href="https://petitions.assembly.go.kr/" target="_blank">고객센터</a></li>
+                </ul>
+            </div>
+            <div id="callNumber">
+                <p>1234-5678</p>
+            </div>
+        </header>
+        <!--헤더 영역 종료-->
+        <!--컨텐츠 영역 시작-->
+        <div id="contentsArea">
+            <!--좌측 영역 시작-->
+            <div id="quickArea">
+                <!--대표 메뉴 주문하기 영역 종료-->
+                <section class="quickOrder">
+                    <h2 class="quickmainmenu">추천 메뉴 목록</h2>
+                    <ul>
+                        <li><a href="https://www.bbq.co.kr/menu/menuView.asp?midx=2247&cidx=114&cname=%ED%99%A9%EC%98%AC+%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98">황금 올리브 치킨</a></li>
+                        <li><a href="https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu">처갓집 슈프림 양념</a></li>
+                        <li><a href="https://m.kyochon.com/menu/menu_list?cateid=2&cateid2=4">교촌 허니콤보</a></li>
+                        <li><a href="https://www.60chicken.com/menu/menuView_chicken?ct_tp=CK&ct_cd=A0100&mn_cd=A0100010">60계 호랑이치킨</a></li>
+                        <li><a href="https://www.goobne.co.kr/menu/menu_view?class_id=&item_id=30890">굽네 고추바사삭</a></li>
+                        <li><a href="https://www.nuguna-banhandak.co.kr/menu?category=ssam">누나홀닭 후레쉬쌈닭</a></li>
+                    </ul>
+                </section>
+                <!--대표 메뉴 주문하기 영역 종료-->
+                <!--좌측 하단 광고 이미지 영역 시작-->
+                <section class="quickImage">
+                    <!--광고이미지 추가-->
+                    <a href="#">
+                        <img src="images/quickImage.jpg" alt="광고">
+                    </a>
+                </section>
+                <!--좌측 하단 광고 이미지 영역 종료-->
+            </div>
+            <!--좌측 영역 종료-->
+
+            <!--가운데 큰 광고 이미지 영역 시작-->  <!--이미지 슬라이더 기능 추가하기-->
+            <div id="orderMainImageArea">
+                <div class="mainImage_canvas">
+                    <div class="mainImage_panel">
+                        <div class="slide">
+                            <a href="menu.html" title="메뉴소개로 이동하기">
+                                <img src="images/olive.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="menu.html" title="메뉴소개로 이동하기">
+                                <img src="images/hoduci.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="menu.html" title="메뉴소개로 이동하기">
+                                <img src="images/honey.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="menu.html" title="메뉴소개로 이동하기">
+                                <img src="images/pericana.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="menu.html" title="메뉴소개로 이동하기">
+                                <img src="images/goobne.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="menu.html" title="메뉴소개로 이동하기">
+                                <img src="images/fresh.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--가운데 큰 광고 이미지 영역 종료-->
+            <!--우측 바로가기 이미지 영역 시작-->
+            <div id="linkArea">
+                <p>경험에서 나온 픽</p>
+                <a href="images/yogiyo3.jpg" target="_blank" title="소개페이지로 이동하기">
+                    <img class="yogiyo1" src="images/yogiyo3.jpg" alt="">
+                </a>
+                <a href="images/yogiyo1.jpg" target="_blank" title="소개페이지로 이동하기">
+                    <img class="yogiyo2" src="images/yogiyo1.jpg" alt="">
+                </a>
+            </div>
+            <!--우측 바로가기 이미지 영역 종료-->
+        </div>
+        <!--컨텐츠 영역 종료-->
+
+        <!--유튜브 영역 시작-->
+        <div id="youtubeArea">
+            <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/558cOz8goq4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <!--유튜브 영역 종료-->
+
+        <!--슬로건 영역 시작-->
+        <div id="footerArea">
+            <div id="slogan">
+                <img src="images/logo.png" alt="logo" width="150">
+                <p>치킨은 살 안쪄요 살은 내가 쪄요</p>
+            </div>
+            <!--슬로건 영역 종료-->
+            <!--푸터 영역 시작-->
+            <footer id="footer">
+                <div id="footerInner">
+                    <p>만든사람 : 이준서 주소 : 고양시 덕양구</p>
+                    <p>먹은사람 : 이준서 전화번호 : 010-5006-3571</p>
+                    <p>E-mail : <a href="mailto:gkrdls0325@naver.com">gkrdls0325@naver.com</a> FAX : 없음</p>
+                    <p class="copyright">COPYRIGHT &copy; 2023 ALL RIGHT RESERVED</p>
+                    <p class="footerCallNumber">1234-5678</p>
+                </div>
+            </footer>
+            <!--푸터 영역 종료-->
+        </div>
+    </div>
+    <!--wrapper 영역 종료-->
+    <!--로그인 영역 시작-->
+    <div class="login">
+        <div class="title">
+            <h2>로그인</h2>
+        </div>
+        <a href="#" class="popup_close" onclick="popupClose();">X</a>
+        <form action="login.jsp" method="post" id="loginForm" name="loginForm">
+            <fieldset>
+                <p class="pId">
+                    <label for="userId">아이디</label>
+                    <input type="text" id="userId" name="userId" required>
+                </p>
+                <p class="pPw">
+                    <label for="userPw">비밀번호</label>
+                    <input type="password" id="userPw" name="userPw" placeholder="비밀번호를 입력하세요." minlength="8" maxlength="12" required>
+                </p>
+                <button type="submit">로그인</button>
+            </fieldset>
+        </form>
+        <div class="memberLink">
+            <p>
+                <a href="join.html" class="join">회원가입</a>
+            </p>
+            <p>
+                <a href="#" class="findIdPw">아이디/비밀번호 찾기</a>
+            </p>
+        </div>
+    </div>
+    <!--로그인 영역 종료-->
+</body>
+</html>

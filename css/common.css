@@ -1,0 +1,452 @@
+@charset "utf-8";
+/*초기화 작업*/
+html,body,div,header,footer,ul,li,h1,h2,h3,p {
+    margin: 0;
+    padding: 0;
+    color: #888;
+    font-size: 16px;
+}
+/*기본 스타일*/
+a {
+  text-decoration: none;
+  color: #888;
+}
+img {
+  border: 0;
+}
+li {
+  list-style: none;
+}
+/*전체적인 레이아웃 설계*/
+#slogan, #footer{
+    position: relative;
+    width: 100%;
+}
+/*해더 영역 시작*/
+#headerid{
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(81,81,81,0.8) 0%,
+    rgb(145,145,145) 50%, rgb(81,81,81) 100%);
+    border-radius: 0 0 15px 15px;
+    height: 200px;
+    position: relative;
+    padding: 0 30px;
+}
+.logo{
+    position: absolute;
+    top: 45px;
+    left: 320px;
+}
+.logo img{
+    width: 200px;
+}
+#headInfo{
+    position: absolute;
+    top: 10px;
+    right: 50px;
+}
+.infoLink{
+    position: relative;
+    text-align: right;
+}
+.infoLink>li{
+    display: inline-block;
+}
+.infoLink a{
+    background:#d59e37;
+    border-radius: 15px;
+    padding: 3px 10px;
+    color:#813504;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.infoLink a:hover,
+.infoLink a:focus,
+.infoLink .goJoin:hover,
+.infoLink .goJoin:focus{
+    box-shadow: 0 0 40px 40px #e5d85c inset;
+}
+.infoLink .goJoin{
+    background:#d59e37;
+    border: none;
+    border-radius: 15px;
+    padding: 3px 10px;
+    color:#813504;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+#headInfo h3{
+    position: relative;
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ccc;
+}
+#headMain{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+}
+.mainMenu{
+    height: 45px;
+    padding-left: 290px;
+    border-radius: 0 0 5px 5px;
+}
+.mainMenu > li{
+    display: inline-block;
+    background:#d59e37;
+    border-radius: 15px;
+    padding: 3px 10px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.mainMenu a{
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    color:#813504;
+}
+.mainMenu>li:hover, 
+.mainMenu>li:focus{
+    color: #ff0;
+    box-shadow: 0 0 40px 40px #e5d85c inset;
+}
+#callNumber{
+    position: absolute;
+    top: 130px;
+    right: 50px;
+}
+#callNumber>p{
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+}
+/*해더 영역 종료*/
+#fixedArea{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, rgba(98,98,98,0.8) 0%, rgb(98,98,98) 50%,
+    rgb(81,81,81) 100%);
+    padding: 21px 5px;
+    border-radius: 50%;
+    z-index: 100;
+    opacity: 1;
+    cursor: pointer;
+}
+#fixedArea a{
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+#fixedArea:hover,
+#fixedArea:focus{
+    opacity: 0.3;
+}
+/*메인 컨텐츠 영역 시작*/
+#contentsArea{
+    position: relative;
+    width: 1024px;
+    margin: 0 auto;
+    height: 580px;
+    padding : 15px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+/*좌측 영역 시작*/
+#quickArea{
+    width: 150px;
+    height: 586px;
+    left: 15px;
+    margin-right: 15px;
+    background-color: #525252;   /*어울리는 색상으로 수정하기*/
+    border-radius: 15px 15px 0 0;
+}
+.quickOrder{
+    text-align: center;
+}
+.quickmainmenu{
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+.quickOrder li{
+    background-color: #ccc;   /*어울리는 색상으로 수정하기*/
+    margin-bottom: 5px;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.quickOrder li:hover,
+.quickOrder li:focus{
+    box-shadow: 0 0 40px 40px #525252 inset;
+    cursor: pointer;
+}
+.quickOrder a{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;  
+}
+.quickImage img{
+    display: block;
+    width: 150px;
+}
+/*좌측 영역 종료*/
+/*우측 영역 시작*/
+#linkArea{
+    margin-left: 15px;
+    width: 150px;
+    height: 550px;
+    position: absolute;
+    padding-top: 15px;
+    right: 15px;
+}
+#linkArea img{
+    position: absolute;
+    width: 150px;
+    height: 550px;
+}
+#linkArea{
+    padding: 0;
+}
+#linkArea>p{
+    position: absolute;
+    top: -10px;
+    text-align: center;
+    left: 0;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #525252;   /*어울리는 색상으로 수정하기*/
+    border-radius: 15px 15px 0 0;
+    width: 150px;
+    color: azure;
+}
+#linkArea img{
+    margin-top: 10px;
+    height: 280px;
+    position: absolute;
+}
+.yogiyo1{
+    top: 0;
+}
+.yogiyo2{
+    bottom: 0;
+}
+/*우측 영역 종료*/
+/*메인 컨텐츠 영역 종료*/
+
+/*유튜브 영역 시작*/
+#youtubeArea{
+    position: relative;
+    height: 320px;
+    margin: 5px 0;
+}
+#youtubeArea .youtube{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+}
+/*유튜브 영역 종료*/
+
+/*푸터 영역 시작*/
+/*슬로건 영역 시작*/
+#footerArea{
+    position: relative;
+    background: linear-gradient(to bottom, rgba(98,98,98,0.8) 0%, rgb(98,98,98) 50%,
+    rgb(81,81,81) 100%);
+    height: 155px;
+    bottom: 0;
+}
+#slogan{
+    position: relative;
+    width: 100%;
+}
+#slogan > img{
+    position: absolute;
+    top: 30px;
+    left: 210px;
+}
+#slogan > p{
+    position: absolute;
+    top: 56px;
+    right: 180px;
+    font-size: 2.1em;
+    font-weight: bold;
+    font-style: italic;
+}
+/*슬로건 영역 종료*/
+
+#footer{
+    position: relative;
+    width: 100%;
+}
+#footerInner{
+    position: absolute;
+    left: 350px;
+    top: 20px;
+}
+#footerInner>p{
+    font-size: 16px;
+    color: #ccc;
+}
+#footerInner a{
+    font-size: 16px;
+    color: #ccc;
+}
+/*푸터 영역 종료*/
+
+/*로그인 영역 시작*/
+.login{
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    border: 2px solid red;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -1px -1px 5px rgba(228, 4, 4, 0.2);
+    z-index: 1000;
+    display: none;
+}
+.login>.title{
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.login>h2{
+    padding: 0 0 10px 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.login>.popup_close{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 3px;
+    right: 5px;
+    border: 1px solid #000;
+    text-decoration: none;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+.login form {
+    position: relative;
+    top: 40px;
+    border-radius: 3px;
+    padding: 10px;
+}
+.login fieldset{
+    position: relative;
+    border: 0;
+    padding: 10px 0;
+}
+.login fieldset>p{
+    position: relative;
+}
+.login label{
+    display: inline-block; /*form태그 만드는 규칙*/
+    width: 100px;
+    font-size: 17px;
+    font-weight: bold;
+    position: relative;
+    top: 7px;
+    left: 50px;
+}
+.login input{
+    width: 200px;
+    height: 25px;
+    padding: 1px 1px 1px 4px;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: 105px;
+}
+#userId{
+    top: 5px;
+}
+#userPw{
+    top: 5px;
+}
+.pId{
+    top: 5px;
+}
+.pPw{
+    top: 20px;
+}
+.login button{
+    position: absolute;
+    top: 27px;
+    right: 10px;
+    width: 80px;
+    height: 50px;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #ff4e00;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.memberLink{
+    position: relative;
+    top: 100px;
+    padding: 0 10px;
+    overflow: hidden;
+    text-align: center;
+}
+.memberLink p{
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #ff4e00;
+    border-radius: 5px;
+}
+.memberLink a:link,
+.memberLink a:visited
+ {
+    color: red;
+}
+.memberLink a:hover,
+.memberLink a:focus,
+.memberLink a:active{
+    color: #fff;
+}
+.join{
+    padding: 0 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.findIdPw{
+    padding: 0 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.login button:hover,
+.join:hover,
+.findIdPw:hover,
+.login button:focus,
+.join:focus,
+.findIdPw:focus{
+    color: #fff;
+    box-shadow: 0 0 40px 40px red inset;
+}
+/*로그인 영역 종료*/
