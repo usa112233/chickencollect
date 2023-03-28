@@ -1,0 +1,88 @@
+@charset "utf-8";
+/*슬라이더 구현 css*/
+.mainArea{
+    position: relative;
+    width: 600px;
+    left: 50px;
+    overflow: hidden;
+}
+.mainPanel{
+    position: relative;
+    width: 4800px;      /*앞 뒤 이미지 추가될 공간 확보*/ /*jqimageslider02 참조*/
+}
+.mainPanel .slide{
+    width: 600px;
+    float: left;
+}
+.mainPanel img{
+    width: 300px;
+    height: 260px;
+}
+.slider_text_panel{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+}
+.slider_text{
+    position: absolute;
+    width: 600px;
+    display: inline-block;
+}
+.left_control{
+    position: absolute;
+    top: 215px;
+    cursor: pointer;
+    left: 0;
+    opacity: 0.1;
+}
+.right_control{
+    position: absolute;
+    top: 215px;
+    cursor: pointer;
+    right: 0;
+    opacity: 0.1;
+}
+.left_control:hover{
+    opacity: 0.5;
+}
+.right_control:hover{
+    opacity: 0.5;
+}
+.mainPanel a{
+    padding: 20px 5px;
+    background-color: tomato;
+    border-radius: 15px;
+    position: relative;
+    bottom: 120px;
+    margin-left: 20px;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: yellow;
+}
+.mainPanel a:hover,
+.mainPanel a:focus{
+    outline: 0;
+    box-shadow: 0 0 40px 40px red inset;
+}
+.slider_text>h3{
+    text-align: center;
+    font-size: 17px;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    color: yellow;
+    background-color: tomato;
+    border-radius: 5px;
+    padding: 3px;
+}
+.slider_text>p{
+    position: absolute;
+    top: 18px;
+    right: 0;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: yellow;
+    background-color: tomato;
+    border-radius: 5px;
+    padding: 3px;
+}

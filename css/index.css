@@ -1,0 +1,25 @@
+@charset "utf-8";
+#orderMainImageArea {
+    position: relative;
+    width: 600px;
+}
+.mainImage_canvas{
+    position: relative;
+    left: 50px;
+    width: 600px;
+    height: 520px;
+    overflow: hidden;
+}
+.mainImage_panel{
+    position: relative;
+    width: 4800px;
+}
+.mainImage_panel .slide{
+    width: 600px;
+    height: 520px;
+    float: left;
+}
+.mainImage_panel img{
+    width: 600px;
+    height: 520px;
+}

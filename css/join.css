@@ -1,0 +1,153 @@
+@charset "utf-8";
+#memberArea{
+    width: 650px;
+    margin: 0 30px;
+    position: relative;
+}
+fieldset{
+    border: 0;
+}
+#memberArea h2{
+    font-size: 1.5em;
+    color: #f00;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    border-bottom: 2px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.formSign{
+    font-size: 0.75em;
+    text-align: left;
+    margin: 10px 0;
+}
+#joinForm{
+    border-top: 2px solid #ccc;
+}
+#joinForm p{
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+}
+#joinForm label, .mailOk em{
+    float: left;
+    width: 120px;
+    padding: 13px 20px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #ccc;    /*입력시 활성화 색상변경 js추가하기*/
+    background: #fff;
+}
+#joinForm .mailOk label{   /*라디오 버튼*/
+    float: none;
+    padding: 0;
+    width: auto;
+    background: none;
+}
+#joinForm input{
+    margin: 15px 0;
+}
+#joinForm input:not([type="radio"]){
+    border: 1px solid #ccc;
+    height: 18px;
+    padding-left: 5px;
+}
+#joinForm input[type="radio"]{
+    margin: 0;
+}
+a.idCheck, a.findZipcode{
+    font-size: 0.9em;
+    background-color: #f00;
+    color: #fff;
+    padding: 3px 15px;
+    margin-left: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+a.findZipcode{
+    position: absolute;
+    left: 230px;
+    top: 12px;
+}
+input#address{
+    display: block;
+    margin: 0;
+}
+.labelAddress{
+    height: 50px;
+    line-height: 50px;
+}
+.mailOk em{    /*메일링 리스트 가입 영역*/
+    font-style: normal;
+    height: 35px;
+    line-height: 35px;  /*가운데로 올수있게 height와 같은 값을 준다.*/
+}
+.mailOk span{  /*span태그는 인라인레벨요소*/
+    display: block;
+    margin: 10px 0; 
+    font-size: 0.75em;
+}
+.mailOk label{
+    cursor: pointer;
+}
+.btnJoinArea{   /*회원가입 / 취소 버튼*/
+    text-align: center;
+    margin: 15px 0;
+}
+[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  transition: border 0.5s ease-in-out;
+}
+
+[type="radio"]:checked {
+  border: 0.4em solid tomato;
+}
+
+[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) dotted tomato;
+}
+
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+
+[type="radio"]:disabled {
+  background-color: lightgray;
+  box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+[type="radio"]:disabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.btnJoinArea button{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 15px;
+    color: red;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0 5px;
+    padding: 8px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight : bold;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.btnJoinArea button:hover,
+.btnJoinArea button:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 40px 40px red inset;
+}
