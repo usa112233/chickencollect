@@ -11,6 +11,7 @@
     <script src="js/jquery-ui.min.js"></script>
     <script>
         $(function(){
+            fadeIcon();
             $('.goJoin').click(function(){
                 popupOpen();
             });
@@ -29,6 +30,12 @@
         //팝업창 클로즈 함수
         function popupClose(){
             $('.login').hide();
+        }
+        //fadeToggle 함수
+        function fadeIcon(){
+            setInterval(function(){
+                $('.arrowicon').fadeToggle(500);
+            },500);
         }
     </script>
 </head>
@@ -52,14 +59,15 @@
                     </li>
                     <li><a href="join.html">회원가입</a></li>
                 </ul>
-                <h3>지금껏 먹었던 치킨중 BEST 픽만 모았습니다</h3>
+                <h3>내 맘대로 뽑은 카테고리별 치킨 추천 사이트</h3>
             </div>
             <div id="headMain">
                 <ul class="mainMenu">
+                    <li><img class="arrowicon" src="images/arrowicon.png" alt="강조하기"></li>
                     <li><a href="menu.html">메뉴소개</a></li>
                     <li><a href="https://naver.me/GrSqepRM" target="_blank">매장찾기</a></li>
-                    <li><a href="https://youtu.be/etj3Y1VVKL4" target="_blank">소개</a></li>
-                    <li><a href="https://petitions.assembly.go.kr/" target="_blank">고객센터</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">고객센터</a></li>
                 </ul>
             </div>
             <div id="callNumber">

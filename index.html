@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>치킨 모음 페이지</title>
+    <title>치킨 순위 모음</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/agent.js"></script>
     <script>
         let index=1;
         $(function(){
             $('.mainImage_panel').append($('.slide').first().clone());
             $('.mainImage_panel').prepend($('.slide').eq(-2).clone());
-            
+            fadeIcon();
             moveSlider(index);
             autoSlider();
             $('.goJoin').click(function(){
@@ -28,7 +29,7 @@
         function moveSlider(index){
             $('.mainImage_panel').animate({
                 left:-(index*600)
-            },'slow');
+            },'fast');
         }
         //자동 이미지 슬라이드 구현 함수
         function autoSlider(){
@@ -55,8 +56,12 @@
         function popupClose(){
             $('.login').hide();
         }
-        
-        
+        //fadeToggle 함수
+        function fadeIcon(){
+            setInterval(function(){
+                $('.arrowicon').fadeToggle(500);
+            },500);
+        }
     </script>
 </head>
 <body>
@@ -79,14 +84,15 @@
                     </li>
                     <li><a href="join.html">회원가입</a></li>
                 </ul>
-                <h3>지금껏 먹었던 치킨중 BEST 픽만 모았습니다</h3>
+                <h3>내 맘대로 뽑은 카테고리별 치킨 추천 사이트</h3>
             </div>
             <div id="headMain">
                 <ul class="mainMenu">
+                    <li><img class="arrowicon" src="images/arrowicon.png" alt="강조하기"></li>
                     <li><a href="menu.html">메뉴소개</a></li>
                     <li><a href="https://naver.me/GrSqepRM" target="_blank">매장찾기</a></li>
-                    <li><a href="https://youtu.be/etj3Y1VVKL4" target="_blank">소개</a></li>
-                    <li><a href="https://petitions.assembly.go.kr/" target="_blank">고객센터</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">고객센터</a></li>
                 </ul>
             </div>
             <div id="callNumber">
@@ -158,6 +164,7 @@
                         </div>
                     </div>
                 </div>
+                <p>이미지를 클릭하면 메뉴창으로 이동합니다.</p>
             </div>
             <!--가운데 큰 광고 이미지 영역 종료-->
             <!--우측 바로가기 이미지 영역 시작-->

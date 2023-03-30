@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>치킨순위모음M</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #fff;
+        }
+        a{
+            text-decoration: none;
+        }
+        nav a:link, a:visited{
+            color: #fff;
+        }
+        nav a:active{
+            color: yellow;
+        }
+        h1{
+            font-size: 1.5em;
+        }
+        h2{
+            font-size: 1.3em;
+        }
+        p{
+            font-size: 1.3em;
+            line-height: 2.5;
+        }
+        li{
+            font-size: 1em;
+            line-height: 2;
+        }
+        #container{
+            width: 100%;
+        }
+        header{
+            width: 100%;
+            height: 300px;
+            background: url(images/boneless.png)no-repeat center;
+            background-size: cover;
+        }
+        nav{
+            height: 50px;
+            background-color: #000;
+        }
+        #main_nav{
+            list-style: none;
+            padding: 10px;
+        }
+        #main_nav li{
+            display: inline-block;
+            color: #fff;
+            font-size: 0.8em;
+            margin: 5px 15px;
+        }
+        .photo{
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+        .photo img{
+            width: 100%;
+        }
+        .soy{
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+        ol{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        footer{
+            background-color: #000;
+        }
+        footer p{
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul id="main_nav">
+                    <li><a href="#fried">후라이드 치킨</a></li>
+                    <li><a href="#seasoned">양념 치킨</a></li>
+                    <li><a href="#soy">간장 치킨</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="fried">
+            <div class="page_title">
+                <h1>후라이드 치킨</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="images/olive.png" alt="olive">
+                </div>
+                <div class="text">
+                    <p>짭쪼롬하고 바삭바삭한 호불호 없는 후라이드치킨</p>
+                    <p>기본이 중요하다!
+                        <i><small>(기본소스 : 양념소스, 머스타드 소스 제공)</small></i>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="soy">
+            <div class="page_title">
+                <h1>간장 치킨</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="images/honey.jpg" alt="honey">
+                </div>
+                <div class="text">
+                    <p>달콤짭짤의 대명사 간장치킨</p>
+                    <p>우리아이 술 안주, 우리 남편 영양간식으로 안성맞춤!</p>
+                </div>
+            </div>
+        </section>
+        <section id="seasoned">
+            <div class="page_title">
+                <h1>양념 치킨</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img class="pericana" src="images/pericana.png" alt="pericana">
+                </div>
+                <div class="text">
+                    <h2>달콤한 양념에 잔뜩 버무려진 양념치킨</h2>
+                    <ol>
+                        <li>달달한 케찹베이스의 양념치킨</li>
+                        <li>매콤한 고추장베이스의 양념치킨</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>치킨은 살 안쪄요 살은 내가 쪄요</p>
+        </footer>
+    </div>
+</body>
+</html>

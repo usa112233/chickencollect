@@ -22,11 +22,15 @@ li {
     position: relative;
     width: 100%;
 }
+header{
+    background-image: linear-gradient(70deg, #C4B68F 0%, #ece1cb 30%, #ece1cb 60%, #C4B68F 100%);
+}
+body {
+    background-color: #f5f5f5;
+}
 /*해더 영역 시작*/
 #headerid{
     overflow: hidden;
-    background: linear-gradient(to bottom, rgba(81,81,81,0.8) 0%,
-    rgb(145,145,145) 50%, rgb(81,81,81) 100%);
     border-radius: 0 0 15px 15px;
     height: 200px;
     position: relative;
@@ -34,11 +38,14 @@ li {
 }
 .logo{
     position: absolute;
-    top: 45px;
+    top: 5px;
     left: 320px;
+    transform: translateY(-45px);
+    opacity: 0.2;
+    transform: skewX(-15deg);
 }
 .logo img{
-    width: 200px;
+    width: 180px;
 }
 #headInfo{
     position: absolute;
@@ -81,11 +88,11 @@ li {
 }
 #headInfo h3{
     position: relative;
-    margin-top: 20px;
+    margin-top: 15px;
     font-style: italic;
-    font-size: 1.8em;
+    font-size: 1.9em;
     font-weight: bold;
-    color: #ccc;
+    color: #813504;
 }
 #headMain{
     position: absolute;
@@ -104,6 +111,16 @@ li {
     padding: 3px 10px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
+.mainMenu > li:first-child{
+    background: none;
+    position: absolute;
+    top: 29px;
+    left: 255px;
+    z-index: 999;
+}
+.mainMenu .arrowicon{
+    width: 25px;
+}
 .mainMenu a{
     font-size: 1.3em;
     font-weight: bold;
@@ -115,6 +132,11 @@ li {
     color: #ff0;
     box-shadow: 0 0 40px 40px #e5d85c inset;
 }
+.mainMenu>li:first-child:hover, 
+.mainMenu>li:first-child:focus{
+    box-shadow: none;
+    color: #ece1cb;
+}
 #callNumber{
     position: absolute;
     top: 130px;
@@ -123,7 +145,8 @@ li {
 #callNumber>p{
     font-size: 40px;
     font-weight: bold;
-    color: #000;
+    color: #813504;
+    font-style: italic;
 }
 /*해더 영역 종료*/
 #fixedArea{
@@ -164,8 +187,9 @@ li {
     height: 586px;
     left: 15px;
     margin-right: 15px;
-    background-color: #525252;   /*어울리는 색상으로 수정하기*/
+    background-image: linear-gradient(to right, #C4B68F 0%, #ece1cb 30%, #ece1cb 70%, #C4B68F 100%);   /*어울리는 색상으로 수정하기*/
     border-radius: 15px 15px 0 0;
+    border-top: 1px solid #813504;
 }
 .quickOrder{
     text-align: center;
@@ -173,9 +197,10 @@ li {
 .quickmainmenu{
     padding-top: 10px;
     margin-bottom: 5px;
+    color: #813504;
 }
 .quickOrder li{
-    background-color: #ccc;   /*어울리는 색상으로 수정하기*/
+    background-color: #d59e37;   /*어울리는 색상으로 수정하기*/
     margin-bottom: 5px;
     padding: 10px 0;
     border-radius: 5px;
@@ -184,14 +209,15 @@ li {
 }
 .quickOrder li:hover,
 .quickOrder li:focus{
-    box-shadow: 0 0 40px 40px #525252 inset;
+    box-shadow: 0 0 40px 40px #e5d85c inset;
     cursor: pointer;
 }
 .quickOrder a{
     font-size: 15px;
     font-weight: bold;
     text-align: center;
-    cursor: pointer;  
+    cursor: pointer;
+    color: #813504;
 }
 .quickImage img{
     display: block;
@@ -222,10 +248,11 @@ li {
     left: 0;
     font-size: 15px;
     font-weight: bold;
-    background-color: #525252;   /*어울리는 색상으로 수정하기*/
+    background-image: linear-gradient(to right, #C4B68F 0%, #ece1cb 30%, #ece1cb 70%, #C4B68F 100%);   /*어울리는 색상으로 수정하기*/
     border-radius: 15px 15px 0 0;
     width: 150px;
-    color: azure;
+    color: #813504;
+    border-top: 1px solid #813504;
 }
 #linkArea img{
     margin-top: 10px;
@@ -270,8 +297,11 @@ li {
 }
 #slogan > img{
     position: absolute;
-    top: 30px;
-    left: 210px;
+    top: 5px;
+    left: 180px;
+    transform: translateY(-30px);
+    opacity: 0.3;
+    transform: skewX(-15deg);
 }
 #slogan > p{
     position: absolute;
