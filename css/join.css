@@ -31,11 +31,11 @@ fieldset{
 #joinForm label, .mailOk em{
     float: left;
     width: 120px;
-    padding: 13px 20px;
+    padding: 16px 20px;
     margin-right: 10px;
     font-weight: bold;
-    color: #ccc;    /*입력시 활성화 색상변경 js추가하기*/
-    background: #fff;
+    color: #813504;
+    background-color: #ece1cb;
 }
 #joinForm .mailOk label{   /*라디오 버튼*/
     float: none;
